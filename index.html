@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script> <!-- 3.3.1 -->
+    <script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/698c66e8a6.js" crossorigin="anonymous"></script>
+    <title>Mateus Cirino</title>
+</head>
+
+<body>
+    <div id="page" class="bg-gray-800 h-screen flex flex-row flex-wrap transition duration-300 ease-in-out">
+        <div class="w-full md:w-1/2 mx-auto self-center">
+            <div id="terminal"
+                class="cursor-pointer w-full shadow-2xl subpixel-antialiased rounded h-64 bg-black border-black mx-auto ">
+                <div class="transition duration-500 ease-in-out hover:bg-black hover:border-black hover:text-white flex items-center h-6 rounded-t bg-gray-100 border-b border-gray-500 text-center text-black"
+                    id="headerTerminal">
+                    <div class="flex ml-2 items-center text-center border-red-900 bg-red-500 shadow-inner rounded-full w-3 h-3"
+                        id="closebtn">
+                    </div>
+                    <div class="ml-2 border-yellow-900 bg-yellow-500 shadow-inner rounded-full w-3 h-3" id="minbtn">
+                    </div>
+                    <div class="ml-2 border-green-900 bg-green-500 shadow-inner rounded-full w-3 h-3" id="maxbtn">
+                    </div>
+                    <div class="mx-auto pr-16" id="terminaltitle">
+                        <p class="text-center text-sm ">Terminal</p>
+                    </div>
+                </div>
+                <div class="pl-1 pt-1 h-auto text-green-200 font-mono text-xs bg-black " id="console">
+                    Open connection()
+                    <br>
+                    <p id="texto" class="p-2" style="font-size: medium; font-family: 'IBM Plex Mono'">
+                        Olá tudo bem? 👋
+                        <br>
+                        Me chamo Mateus, estou no 7° período do curso de Ciência da Computação e sou estagiário na <span
+                            class="bg-white text-black"><a href="https://www.hetikos.com.br/">Hetikos
+                                Assessoria</a></span>.
+                        <br>
+                        Atualmente trabalho com <u>PHP</u>,
+                        mais especificamente utilizando o framework <span
+                            class="bg-indigo-900 text-white hover:bg-white hover:text-indigo-900"><a
+                                href="https://laravel.com/">Laravel</a></span> e também com
+                        <u>HTML, CSS e Javascript</u> utilizando frameworks/libs como: <span
+                            class="bg-red-500 text-white hover:bg-white hover:text-red-500"><a
+                                href="https://tailwindcss.com/">TailwindCSS</a></span>,
+                        <span class="bg-green-500 text-white hover:bg-white hover:text-green-500"><a
+                                href="https://jquery.com/">Jquery</a></span> e
+                        <span class="bg-purple-500 text-white hover:bg-white hover:text-purple-500"><a
+                                href="https://github.com/alpinejs/alpine">AlpineJS</a></span>.
+                        <br>
+                        ~
+                        <br>
+                        ~
+                        <br>
+                        ~
+                        <br>
+                        Tenho estudado mais a fundo a linguagem <u>JAVA</u>, e novos conceitos mais a fundo como
+                        collection, lambdas e stream...
+                        Além disso também tenho um leve interesse nas áreas de UI/UX. 😁
+                        <br>
+                        <br>
+                        <a href="https://twitter.com/mmateuscirino"><i class="text-center fab fa-twitter"></i></a>
+                        <a href="https://github.com/mateus-cirino"><i class="text center fab fa-github"></i></a>
+                        <---------------- caso queira mandar um oi </div> </div> </div> </div> <script>
+
+                            //efeito de digitacao
+                            var new_speed=100;
+
+                            $('#texto').t({
+                            speed:100,
+                            typing:
+                            function(e){
+                            new_speed-=10;
+                            e.s(new_speed);
+                            }
+                            });
+
+                            //efeito da troca de cores ao passar o mouse no terminal
+                            $('#terminal').hover(
+                            function(){
+                            $(page).removeClass('bg-gray-800')
+                            $(page).addClass('bg-white')
+                            },
+                            function(){
+                            $(page).removeClass('bg-white')
+                            $(page).addClass('bg-gray-800')
+                            },
+                            )
+                            </script>
+</body>
+
+</html>
