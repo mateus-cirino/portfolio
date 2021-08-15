@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <div>
       <Head>
+        <title>Mateus Cirino</title>
         <link rel="icon" href="/images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
