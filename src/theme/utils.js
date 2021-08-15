@@ -21,4 +21,5 @@ export const propToStyle = (propName) => (props) => {
       [propName]: propValue,
     };
   }
+  return {};
 };
