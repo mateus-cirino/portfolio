@@ -7,7 +7,7 @@ import ToggleModeStyle from './style';
 const ToggleMode = () => {
   const { mode, setMode } = useContext(ModeContext);
   const onClickToggleMode = () => setMode(mode === 'light' ? 'dark' : 'light');
-  const icon = mode === 'light' ? <HiMoon /> : <CgSun />;
+  const icon = mode === 'light' ? <HiMoon size={25} /> : <CgSun size={25} />;
   return (
     <ToggleModeStyle onClick={onClickToggleMode}>
       {icon}
