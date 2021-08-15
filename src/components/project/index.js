@@ -11,7 +11,9 @@ const Project = () => (
       type and scrambled it to make a type specimen book. It has survived not only five centuries, b
       the leap into electronic typesetting, remaining essentially unchanged. It was popularised in t
     </TextStyle>
-    <TextStyle typographyVariant="link" as="a" href="https://github.com/mateus-cirino" isDestaque marginTop="5px">Repositório</TextStyle>
+    <TextStyle typographyVariant="link" as="a" href="https://github.com/mateus-cirino?tab=repositories" isDestaque marginTop="5px">
+      Repositório
+    </TextStyle>
   </ProjectStyle>
 );
 

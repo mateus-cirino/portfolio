@@ -1,11 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
-import normalize from 'normalize.css';
+import { normalize } from 'styled-normalize';
+import { profileImageCSS } from '../components/profileImage/style';
 
 export const GlobalStyle = createGlobalStyle`
     ${normalize}
     h1, h2, p, a {
       margin: 0;
     }
+    ${profileImageCSS}
 `;
 
 const typographyVariants = {
@@ -38,7 +40,6 @@ const typographyVariants = {
     fontSize: '16px',
     fontWeight: '900',
     lineHeight: '18px',
-    fontStyle: 'italic',
   },
 };
 
