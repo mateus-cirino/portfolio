@@ -18,6 +18,6 @@ const TextStyle = styled.span`
 export default TextStyle;
 
 TextStyle.propTypes = {
-  typographyVariant: PropType.oneOf(['logo', 'title', 'paragraph', 'link']),
+  typographyVariant: PropType.oneOf(['logo', 'title', 'paragraph', 'link']).isRequired,
   isDestaque: PropType.oneOfType([PropType.bool]),
 };

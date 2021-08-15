@@ -32,7 +32,7 @@ const typographyVariants = {
   },
   title: {
     fontFamily: '\'Montserrat\', sans-serif',
-    fontSize: '24px',
+    fontSize: '28px',
     fontWeight: '900',
     lineHeight: '1.4em',
     letterSpacing: '-0.05em',

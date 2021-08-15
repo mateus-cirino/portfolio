@@ -5,8 +5,13 @@ import TextStyle from '../src/components/text/style';
 import Project from '../src/components/project';
 import ContainerStyle from '../src/components/grid/style';
 import ToggleMode from '../src/components/toggleMode';
+import projects from '../public/projects';
 
 export default function Home() {
+  const getProject = (name, description, repository) => (
+    <Project name={name} description={description} repository={repository} />
+  );
+
   return (
     <div>
       <Head>
@@ -27,9 +32,10 @@ export default function Home() {
           <ToggleMode />
         </div>
         <About />
-        <Project />
-        <Project />
-        <Project />
+        {
+        projects
+          .map(({ name, description, repository }) => getProject(name, description, repository))
+        }
       </ContainerStyle>
     </div>
   );
