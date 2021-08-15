@@ -3,7 +3,7 @@ import normalize from 'normalize.css';
 
 export const GlobalStyle = createGlobalStyle`
     ${normalize}
-    p {
+    h1, h2, p, a {
       margin: 0;
     }
 `;
@@ -13,8 +13,8 @@ const typographyVariants = {
     fontFamily: '\'Montserrat\', sans-serif',
     fontSize: '36px',
     fontWeight: '900',
-    lineHeight: '34px',
-    letterSpacing: '-0.07em',
+    lineHeight: '14px',
+    letterSpacing: '-0.05em',
     textTransform: 'capitalize',
     fontVariant: 'small-caps',
   },
@@ -22,8 +22,8 @@ const typographyVariants = {
     fontFamily: '\'Montserrat\', sans-serif',
     fontSize: '24px',
     fontWeight: '900',
-    lineHeight: '26px',
-    letterSpacing: '-0.07em',
+    lineHeight: '8px',
+    letterSpacing: '-0.05em',
     textTransform: 'lowercase',
     fontVariant: 'small-caps',
   },
@@ -32,14 +32,12 @@ const typographyVariants = {
     fontSize: '16px',
     fontWeight: '400',
     lineHeight: '18px',
-    letterSpacing: '0em',
   },
   link: {
     fontFamily: '\'Merriweather\', sans-serif',
     fontSize: '16px',
     fontWeight: '900',
     lineHeight: '18px',
-    letterSpacing: '0em',
     fontStyle: 'italic',
   },
 };
@@ -49,7 +47,13 @@ const colors = {
   secondary: '#D32929',
 };
 
+const breakpoints = {
+  xs: 0,
+  md: 768,
+};
+
 export const theme = {
   typographyVariants,
   colors,
+  breakpoints,
 };

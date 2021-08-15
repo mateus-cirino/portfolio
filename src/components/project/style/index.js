@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-const AboutStyle = styled.div`
+const ProjectStyle = styled.div`
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
     margin-top: 15px;
 `;
 
-export default AboutStyle;
+export default ProjectStyle;
