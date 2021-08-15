@@ -6,6 +6,7 @@ const TextStyle = styled.span`
   ${(props) => props.theme.typographyVariants[props.typographyVariant]}
   ${propToStyle('width')}
   ${propToStyle('marginTop')}
+  ${propToStyle('marginLeft')}
   ${(props) => `color: ${props.isDestaque ? props.theme.colors.secondary : props.theme.colors.primary}`}
 `;
 

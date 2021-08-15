@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const ProjectStyle = styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin-top: 30px;
 `;
 
 export default ProjectStyle;

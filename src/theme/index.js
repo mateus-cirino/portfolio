@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     ${normalize}
     h1, h2, p, a {
       margin: 0;
+      text-decoration: none;
     }
     ${profileImageCSS}
 `;
@@ -15,7 +16,7 @@ const typographyVariants = {
     fontFamily: '\'Montserrat\', sans-serif',
     fontSize: '36px',
     fontWeight: '900',
-    lineHeight: '14px',
+    lineHeight: '1.4em',
     letterSpacing: '-0.05em',
     textTransform: 'capitalize',
     fontVariant: 'small-caps',
@@ -24,7 +25,7 @@ const typographyVariants = {
     fontFamily: '\'Montserrat\', sans-serif',
     fontSize: '24px',
     fontWeight: '900',
-    lineHeight: '8px',
+    lineHeight: '1.4em',
     letterSpacing: '-0.05em',
     textTransform: 'lowercase',
     fontVariant: 'small-caps',
@@ -33,13 +34,13 @@ const typographyVariants = {
     fontFamily: '\'Merriweather\', sans-serif',
     fontSize: '16px',
     fontWeight: '400',
-    lineHeight: '18px',
+    lineHeight: '1.4em',
   },
   link: {
     fontFamily: '\'Merriweather\', sans-serif',
     fontSize: '16px',
     fontWeight: '900',
-    lineHeight: '18px',
+    lineHeight: '1.4em',
   },
 };
 
