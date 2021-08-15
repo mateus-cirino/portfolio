@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
+import PropTypes from 'prop-types';
 import { profileImageCSS } from '../components/profileImage/style';
 
 export const GlobalStyle = createGlobalStyle`
@@ -8,8 +9,16 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       text-decoration: none;
     }
+    #__next {
+      ${({ mode, theme }) => `background-color: ${theme.colors.backgroundColors[mode]};`}
+    }
     ${profileImageCSS}
 `;
+
+GlobalStyle.propTypes = {
+  mode: PropTypes.oneOfType([PropTypes.string]),
+  theme: PropTypes.oneOfType([PropTypes.object]),
+};
 
 const typographyVariants = {
   logo: {
@@ -45,8 +54,20 @@ const typographyVariants = {
 };
 
 const colors = {
-  primary: '#000000',
-  secondary: '#D32929',
+  textColors: {
+    light: {
+      primary: '#000000',
+      secondary: '#D32929',
+    },
+    dark: {
+      primary: '#FFFFFF',
+      secondary: '#D7385E',
+    },
+  },
+  backgroundColors: {
+    light: '#FFFFFF',
+    dark: '#070C0E',
+  },
 };
 
 const breakpoints = {
