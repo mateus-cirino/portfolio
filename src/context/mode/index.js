@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 
 const ModeContext = createContext({
-  mode: 'light',
+  mode: '',
   setMode: () => {},
 });
 

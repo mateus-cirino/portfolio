@@ -8,7 +8,7 @@ import ModeContext from '../src/context/mode';
 import { theme, GlobalStyle } from '../src/theme/index';
 
 function MyApp({ Component, pageProps }) {
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState('dark');
 
   return (
     <>
