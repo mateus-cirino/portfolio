@@ -21,7 +21,7 @@ const projects = [
   },
   {
     name: 'Desenvolvimento na prática',
-    description: 'Repositório criado para ser utilizado durante um minicurso que apresentei na minha faculdade. O intuito do curso foi demonstrar as vantagens do uso do paradigma Orientado a Objetos',
+    description: 'Repositório criado para ser utilizado durante um minicurso que apresentei na minha faculdade. O intuito do curso foi demonstrar as vantagens do uso do paradigma Orientado a Objetos.',
     repository: 'https://github.com/mateus-cirino/desenvolvimento-na-pratica',
   },
   {
