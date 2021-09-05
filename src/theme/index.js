@@ -13,6 +13,9 @@ export const GlobalStyle = createGlobalStyle`
       ${({ mode, theme }) => `background-color: ${theme.colors.backgroundColors[mode]};`}
     }
     ${profileImageCSS}
+    * {
+      transition: opacity 0.5s ease-out, background 0.5s ease-out
+    }
 `;
 
 GlobalStyle.propTypes = {
