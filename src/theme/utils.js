@@ -21,5 +21,13 @@ export const propToStyle = (propName) => (props) => {
       [propName]: propValue,
     };
   }
+
+  if (typeof propValue === 'object') {
+    return (breakpointsMedia({
+      ...(propValue.xs && { xs: propValue.xs }),
+      ...(propValue.md && { md: propValue.md }),
+    }));
+  }
+
   return {};
 };
