@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
       text-decoration: none;
     }
     #__next {
-      ${({ mode, theme }) => `background-color: ${theme.colors.backgroundColors[mode]};`}
+      ${({ theme }) => `background-color: ${theme.colors.backgroundColors};`}
     }
     ${profileImageCSS}
     * {
@@ -19,7 +19,6 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 GlobalStyle.propTypes = {
-  mode: PropTypes.oneOfType([PropTypes.string]),
   theme: PropTypes.oneOfType([PropTypes.object]),
 };
 
@@ -56,30 +55,37 @@ const typographyVariants = {
   },
 };
 
-const colors = {
-  textColors: {
-    light: {
-      primary: '#000000',
-      secondary: '#D32929',
-    },
-    dark: {
-      primary: '#FFFFFF',
-      secondary: '#D7385E',
-    },
-  },
-  backgroundColors: {
-    light: '#FFFFFF',
-    dark: '#070C0E',
-  },
-};
-
-const breakpoints = {
+export const breakpoints = {
   xs: 0,
   md: 768,
 };
 
-export const theme = {
+export const lightColors = {
+  colors: {
+    textColors: {
+      primary: '#000000',
+      secondary: '#D32929',
+    },
+    backgroundColors: '#FFFFFF',
+  },
+};
+
+export const darkColors = {
+  colors: {
+    textColors: {
+      primary: '#FFFFFF',
+      secondary: '#D7385E',
+    },
+    backgroundColors: '#070C0E',
+  },
+};
+
+export const themeLight = {
   typographyVariants,
-  colors,
-  breakpoints,
+  ...lightColors,
+};
+
+export const themeDark = {
+  typographyVariants,
+  ...darkColors,
 };

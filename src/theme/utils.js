@@ -1,8 +1,7 @@
 import { css } from 'styled-components';
-import { theme } from '.';
+import { breakpoints } from '.';
 
 export const breakpointsMedia = (cssByBreakpoint) => {
-  const { breakpoints } = theme;
   const breakpointNames = Object.keys(cssByBreakpoint);
   return breakpointNames.filter((it) => Object.prototype.hasOwnProperty.call(breakpoints, it))
     .map(
