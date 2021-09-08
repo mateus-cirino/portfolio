@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import { propToStyle } from '../../../theme/utils';
 
 const BoxStyle = styled.div`
-    ${propToStyle('margin')}
+    ${({ theme }) => `background-color: ${theme.colors.backgroundColors.primary};`}
+    ${propToStyle('marginLeft')}
     ${propToStyle('marginTop')}
     ${propToStyle('padding')}
     ${propToStyle('display')}
     ${propToStyle('justifyContent')}
+    ${propToStyle('alignItems')}
+    ${propToStyle('flexWrap')}
     ${propToStyle('width')}
-    ${({ theme }) => `background-color: ${theme.colors.backgroundColors};`}
 `;
 
 export default BoxStyle;

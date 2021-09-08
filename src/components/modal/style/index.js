@@ -14,6 +14,7 @@ const ModalStyle = styled.div`
     bottom: 0;
     margin: auto;
     z-index: 100;
+    width: 100%;
     ${({ isOpen }) => (isOpen
     ? `opacity: 1;
     pointer-events: all;`

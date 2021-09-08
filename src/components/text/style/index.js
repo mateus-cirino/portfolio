@@ -7,6 +7,7 @@ const TextStyle = styled.span`
   ${propToStyle('width')}
   ${propToStyle('marginTop')}
   ${propToStyle('marginLeft')}
+  ${propToStyle('textAlign')}
   ${(props) => `color: ${props.isDestaque ? props.theme.colors.textColors.secondary : props.theme.colors.textColors.primary};`}
 `;
 

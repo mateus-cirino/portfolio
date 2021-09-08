@@ -10,11 +10,12 @@ export const GlobalStyle = createGlobalStyle`
       text-decoration: none;
     }
     #__next {
-      ${({ theme }) => `background-color: ${theme.colors.backgroundColors};`}
+      ${({ theme }) => `background-color: ${theme.colors.backgroundColors.primary};`}
     }
     ${profileImageCSS}
     * {
-      transition: opacity 0.5s ease-out, background 0.5s ease-out
+      transition: opacity 0.3s ease-out, background 0.3s ease-out;
+      box-sizing: border-box;
     }
 `;
 
@@ -66,7 +67,10 @@ export const lightColors = {
       primary: '#000000',
       secondary: '#D32929',
     },
-    backgroundColors: '#FFFFFF',
+    backgroundColors: {
+      primary: '#FFFFFF',
+      secondary: '#f5f5f5',
+    },
   },
 };
 
@@ -76,7 +80,10 @@ export const darkColors = {
       primary: '#FFFFFF',
       secondary: '#D7385E',
     },
-    backgroundColors: '#070C0E',
+    backgroundColors: {
+      primary: '#070C0E',
+      secondary: '#0b1417',
+    },
   },
 };
 
