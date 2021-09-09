@@ -23,6 +23,12 @@ GlobalStyle.propTypes = {
   theme: PropTypes.oneOfType([PropTypes.object]),
 };
 
+export const HiddenScrollGlobalStyle = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
+`;
+
 const typographyVariants = {
   logo: {
     fontFamily: '\'Montserrat\', sans-serif',
@@ -87,12 +93,16 @@ export const darkColors = {
   },
 };
 
+const borderRadius = '10px';
+
 export const themeLight = {
   typographyVariants,
+  borderRadius,
   ...lightColors,
 };
 
 export const themeDark = {
   typographyVariants,
+  borderRadius,
   ...darkColors,
 };

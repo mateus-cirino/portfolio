@@ -5,6 +5,7 @@ const FormStyle = styled.form`
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 10px;
+    align-itens: center
 `;
 
 export default FormStyle;

@@ -4,8 +4,9 @@ import { propToStyle } from '../../../theme/utils';
 
 const BoxStyle = styled.div`
     ${({ theme }) => `background-color: ${theme.colors.backgroundColors.primary};`}
-    ${propToStyle('marginLeft')}
+    ${propToStyle('opacity')}
     ${propToStyle('marginTop')}
+    ${propToStyle('marginLeft')}
     ${propToStyle('padding')}
     ${propToStyle('display')}
     ${propToStyle('justifyContent')}

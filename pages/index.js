@@ -43,6 +43,7 @@ export default function Home() {
             <BoxStyle
               // eslint-disable-next-line react/jsx-props-no-spreading
               {...propsDoModal}
+              opacity="0.9"
               marginLeft="auto"
               padding="25px"
               width={{
@@ -55,11 +56,9 @@ export default function Home() {
                   width: '35%',
                 },
               }}
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              flexWrap="wrap"
+              display="block"
             >
+              { propsDoModal.CloseButton }
               <BoxStyle
                 display="flex"
                 justifyContent="center"
@@ -69,7 +68,7 @@ export default function Home() {
                 <TextStyle typographyVariant="title" as="h2" isDestaque textAlign="center">
                   Entre em contato
                 </TextStyle>
-                <TextStyle typographyVariant="paragraph" as="p" textAlign="center" marginTop="10px">
+                <TextStyle typographyVariant="paragraph" as="p" textAlign="center" marginTop="10px" marginBottom="10px">
                   Sinta-se a vontade para me enviar uma mensagem!
                   (Obs.: Por hora esse formulário ainda não está funcionando, mas em breve estará!)
                 </TextStyle>
