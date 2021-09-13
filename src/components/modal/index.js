@@ -5,6 +5,7 @@ import ModalStyle from './style';
 import { HiddenScrollGlobalStyle } from '../../theme';
 import closeIcon from '../../../public/images/close-icon.svg';
 import ButtonStyle from '../button/style';
+import ModalMotion from './motion';
 
 const Modal = ({ children, isOpen, setIsOpen }) => {
   const closeModal = () => setIsOpen(false);
@@ -26,10 +27,12 @@ const Modal = ({ children, isOpen, setIsOpen }) => {
   return (
     <ModalStyle isOpen={isOpen} onClick={onClickModal}>
       {isOpen && <HiddenScrollGlobalStyle />}
-      {children({
-        'data-modal-safe-area': 'true',
-        CloseButton,
-      })}
+      <ModalMotion isOpen={isOpen}>
+        {children({
+          'data-modal-safe-area': 'true',
+          CloseButton,
+        })}
+      </ModalMotion>
     </ModalStyle>
   );
 };

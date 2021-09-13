@@ -33,7 +33,7 @@ export default function Home() {
           <TextStyle typographyVariant="logo" as="h1">
             Mateus Cirino
           </TextStyle>
-          <BoxStyle marginTop="10px">
+          <BoxStyle marginTop="10px" display="flex">
             <ToggleContact marginRight="25px" onClick={onClickToggleContact} />
             <ToggleMode />
           </BoxStyle>
