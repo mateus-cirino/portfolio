@@ -4,20 +4,21 @@
 
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import ModeContext from '../src/context/mode';
-import { theme, GlobalStyle } from '../src/theme/index';
+import DarkModeContext from '../src/context/darkMode';
+import { GlobalStyle, themeDark, themeLight } from '../src/theme/index';
 
 function MyApp({ Component, pageProps }) {
-  const [mode, setMode] = useState('dark');
-
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
+  const getTheme = isDarkMode ? themeDark : themeLight;
   return (
     <>
-      <ModeContext.Provider value={{ mode, setMode }}>
-        <GlobalStyle mode={mode} theme={theme} />
-        <ThemeProvider theme={theme}>
+      <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
+        <GlobalStyle theme={getTheme} />
+        <ThemeProvider theme={getTheme}>
           <Component {...pageProps} />
         </ThemeProvider>
-      </ModeContext.Provider>
+      </DarkModeContext.Provider>
     </>
   );
 }

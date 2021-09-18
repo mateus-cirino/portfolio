@@ -1,15 +1,14 @@
 import React, { useContext } from 'react';
 import { CgSun } from 'react-icons/cg';
 import { HiMoon } from 'react-icons/hi';
-import ModeContext from '../../context/mode';
 import ToggleModeStyle from './style';
+import DarkModeContext from '../../context/darkMode';
 
 const ToggleMode = () => {
-  const { mode, setMode } = useContext(ModeContext);
-  const onClickToggleMode = () => setMode(mode === 'light' ? 'dark' : 'light');
-  const icon = mode === 'light' ? <HiMoon size={25} /> : <CgSun size={25} />;
+  const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const icon = (isDarkMode ? <CgSun size={25} /> : <HiMoon size={25} />);
   return (
-    <ToggleModeStyle onClick={onClickToggleMode}>
+    <ToggleModeStyle onClick={toggleDarkMode}>
       {icon}
     </ToggleModeStyle>
   );

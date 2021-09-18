@@ -10,15 +10,24 @@ export const GlobalStyle = createGlobalStyle`
       text-decoration: none;
     }
     #__next {
-      ${({ mode, theme }) => `background-color: ${theme.colors.backgroundColors[mode]};`}
+      ${({ theme }) => `background-color: ${theme.colors.backgroundColors.primary};`}
     }
     ${profileImageCSS}
+    * {
+      transition: opacity 0.3s ease-out, background 0.3s ease-out;
+      box-sizing: border-box;
+    }
 `;
 
 GlobalStyle.propTypes = {
-  mode: PropTypes.oneOfType([PropTypes.string]),
   theme: PropTypes.oneOfType([PropTypes.object]),
 };
+
+export const HiddenScrollGlobalStyle = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
+`;
 
 const typographyVariants = {
   logo: {
@@ -53,30 +62,47 @@ const typographyVariants = {
   },
 };
 
-const colors = {
-  textColors: {
-    light: {
-      primary: '#000000',
-      secondary: '#D32929',
-    },
-    dark: {
-      primary: '#FFFFFF',
-      secondary: '#D7385E',
-    },
-  },
-  backgroundColors: {
-    light: '#FFFFFF',
-    dark: '#070C0E',
-  },
-};
-
-const breakpoints = {
+export const breakpoints = {
   xs: 0,
   md: 768,
 };
 
-export const theme = {
+export const lightColors = {
+  colors: {
+    textColors: {
+      primary: '#000000',
+      secondary: '#D32929',
+    },
+    backgroundColors: {
+      primary: '#FFFFFF',
+      secondary: '#f5f5f5',
+    },
+  },
+};
+
+export const darkColors = {
+  colors: {
+    textColors: {
+      primary: '#FFFFFF',
+      secondary: '#D7385E',
+    },
+    backgroundColors: {
+      primary: '#070C0E',
+      secondary: '#0b1417',
+    },
+  },
+};
+
+const borderRadius = '10px';
+
+export const themeLight = {
   typographyVariants,
-  colors,
-  breakpoints,
+  borderRadius,
+  ...lightColors,
+};
+
+export const themeDark = {
+  typographyVariants,
+  borderRadius,
+  ...darkColors,
 };
