@@ -25,5 +25,5 @@ const ModalStyle = styled.div`
 export default ModalStyle;
 
 ModalStyle.propTypes = {
-  isOpen: PropTypes.oneOfType([PropTypes.object]),
+  isOpen: PropTypes.bool.isRequired,
 };

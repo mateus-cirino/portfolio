@@ -12,8 +12,8 @@ import BoxStyle from '../src/components/box/style';
 import Form from '../src/components/form';
 
 export default function Home() {
-  const getProject = (name, description, repository) => (
-    <Project name={name} description={description} repository={repository} />
+  const getProject = (name, description, repository, index) => (
+    <Project name={name} description={description} repository={repository} key={index} />
   );
 
   const [showModalContact, setShowModalContact] = useState(false);
@@ -80,7 +80,11 @@ export default function Home() {
         <About />
         {
         projects
-          .map(({ name, description, repository }) => getProject(name, description, repository))
+          .map(({
+            name,
+            description,
+            repository,
+          }, index) => getProject(name, description, repository, index))
         }
       </ContainerStyle>
     </div>

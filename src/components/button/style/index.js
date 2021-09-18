@@ -27,7 +27,10 @@ const ButtonStyle = styled.button`
     cursor: pointer;
     &:hover,
     &:focus {
-      opacity: 0.5;
+      opacity: 0.6;
+    }
+    &:disabled {
+      opacity: 0.2;
     }
 `;
 

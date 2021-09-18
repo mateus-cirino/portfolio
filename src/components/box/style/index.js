@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { propToStyle } from '../../../theme/utils';
 
 const BoxStyle = styled.div`
@@ -16,7 +15,3 @@ const BoxStyle = styled.div`
 `;
 
 export default BoxStyle;
-
-BoxStyle.propTypes = {
-  theme: PropTypes.oneOfType[PropTypes.object],
-};
