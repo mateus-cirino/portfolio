@@ -8,7 +8,7 @@ import DarkModeContext from '../src/context/darkMode';
 import { GlobalStyle, themeDark, themeLight } from '../src/theme/index';
 
 function MyApp({ Component, pageProps }) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
   const getTheme = isDarkMode ? themeDark : themeLight;
   return (
