@@ -24,6 +24,7 @@
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^16.2.4",
+    "@next/eslint-plugin-next": "^13.0.0",
     "babel-plugin-styled-components": "^1.13.2",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
